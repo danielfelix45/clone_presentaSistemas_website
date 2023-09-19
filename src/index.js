@@ -15,9 +15,9 @@ function ocultarBtn(){
   }
 };
 
-// Aqui manipula o Header o header quando scroll
+// Aqui manipula o header quando scroll
 function shortenHeader(){
-  if(window.scrollY === 0){
+  if(window.scrollY == 0){
     header.classList.add('md:h-32')
   }else{
     header.classList.remove('md:h-32')
