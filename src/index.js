@@ -1,4 +1,5 @@
-const btn = document.querySelector('#btnTop');
+const btn = document.querySelector('.btnTop');
+const header = document.querySelector('.header')
 
 // Faz o botão ir para o topo da página
 btn.addEventListener('click', function(){
@@ -14,8 +15,18 @@ function ocultarBtn(){
   }
 };
 
+// Aqui manipula o Header o header quando scroll
+function shortenHeader(){
+  if(window.scrollY === 0){
+    header.classList.add('md:h-32')
+  }else{
+    header.classList.remove('md:h-32')
+  }
+};
+
 document.addEventListener('scroll', function() {
   ocultarBtn()
+  shortenHeader()
 });
 
 // Abre e fecha o menu
